@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./assets/aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.keys{
+    display: flex;
+    border: 2px solid rgb(4, 4, 4);
+    background: rgba(0, 0, 0, 0.346);
+    backdrop-filter: blur(30px);
+}
+.key{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px  rgba(2, 2, 2, 0.923);
+    width: 5vw;
+    height: 7vh;
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    transition: all .09s;
+}
+kbd{
+    font-size: 1.3vw;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+.sound{
+    font-size: 1vw;
+    color: rgb(255, 255, 255)
+}
+.playing{
+    box-shadow: 0px 0px 5px 4px rgb(255, 1, 213);
+    background-color:  rgba(230, 48, 218, 0.269);
+    transform: scale(1.1);
+}
