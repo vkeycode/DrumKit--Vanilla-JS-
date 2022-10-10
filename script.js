@@ -5,16 +5,25 @@ function playSounds(e) {
     audio.currentTime = 0;
     audio.play();
     key.classList.add("playing")
+    tempoCircle(e)
 }
-
 
 function removeTransition(e){
     if(e.propertyName !== "transform") return;
     this.classList.remove("playing")
 }
 
+function tempoCircle(e) {
+    const tempo = document.querySelector(".tempo")
+    tempo.classList.add(`radius${e.keyCode}`)
+    setTimeout(() => {
+        tempo.classList.remove(`radius${e.keyCode}`)
+    }, 200);
+}
+
 
 const keys = document.querySelectorAll(".key");
+
 keys.forEach( key => key.addEventListener("transitionend", removeTransition))
 
 window.addEventListener("keydown", playSounds)

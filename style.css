@@ -1,47 +1,141 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("./assets/aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.keys{
-    display: flex;
-    border: 2px solid rgb(4, 4, 4);
-    background: rgba(0, 0, 0, 0.346);
-    backdrop-filter: blur(30px);
+.keys {
+  display: flex;
+  align-items: flex-end;
+  border: 2px solid rgb(4, 4, 4);
+  background: rgba(0, 0, 0, 0.346);
+  backdrop-filter: blur(30px);
 }
-.key{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px  rgba(2, 2, 2, 0.923);
-    width: 5vw;
-    height: 7vh;
-    text-shadow: 1px 2px rgb(0, 0, 0);
-    transition: all .09s;
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(2, 2, 2, 0.923);
+  width: 5vw;
+  height: 7vh;
+  text-shadow: 1px 2px rgb(0, 0, 0);
+  transition: all 0.09s;
 }
-kbd{
-    font-size: 1.3vw;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
+kbd {
+  font-size: 1.3vw;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
 }
-.sound{
-    font-size: 1vw;
-    color: rgb(255, 255, 255)
+.sound {
+  font-size: 0.6vw;
+  color: rgb(255, 255, 255);
 }
-.playing{
-    box-shadow: 0px 0px 5px 4px rgb(255, 1, 213);
-    background-color:  rgba(230, 48, 218, 0.269);
-    transform: scale(1.1);
+.playing {
+  box-shadow: 0px 0px 5px 4px rgb(255, 1, 213);
+  background-color: rgba(230, 48, 218, 0.269);
+  transform: scale(1.1);
 }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 50%;
+}
+.tempo {
+  overflow: hidden;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(100px);
+  height: 17vw;
+  width: 17vw;
+  border-radius: 50%;
+  transition: 0.5s;
+  
+  box-shadow: 0px 0px 2px 2px rgb(255, 1, 213);
+  border: 4px solid rgb(0, 0, 0);
+  border-left: 4px solid rgb(110, 110, 110);
+  animation: rotate 5s infinite linear;
+}
+.title{
+  animation: rever 5s infinite linear;
+  color: aliceblue;
+  font-size: 1.5vw;
+}
+@keyframes rever {
+  from{transform: rotate(360deg)}
+  to{transform: rotate(0deg);}
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.radius65 {
+  border-radius: 30% 70% 63% 37% / 30% 27% 73% 70%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius83 {
+  border-radius: 53% 47% 63% 37% / 30% 83% 17% 70%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius68 {
+  border-radius: 53% 80% 63% 37% / 46% 48% 90% 54%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius70 {
+  border-radius: 53% 47% 63% 37% / 46% 48% 52% 54%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius71 {
+  border-radius: 17% 83% 42% 58% / 46% 48% 52% 54%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius72 {
+  border-radius: 17% 83% 17% 83% / 46% 23% 77% 54%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius74 {
+  border-radius: 17% 83% 71% 29% / 46% 15% 85% 54%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius75 {
+  border-radius: 33% 67% 87% 13% / 5% 38% 62% 95%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+.radius76 {
+  border-radius: 33% 67% 71% 29% / 46% 72% 28% 54%;
+  opacity: 1;
+  box-shadow: 0px 0px 6px 12px rgb(255, 1, 213);
+}
+
+
+
+
+
